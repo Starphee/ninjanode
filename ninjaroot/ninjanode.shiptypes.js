@@ -108,10 +108,10 @@ module.exports = {
 
   g: {
     name: 'Falcon',
-    topSpeed: 50,
+    topSpeed: 22,
     accelRate: 1.1,
     drag: 0.06,
-    rotationSpeed: 10,
+    rotationSpeed: 14,
     shield: {
       max: 75,
       regenRate: 0.2,
@@ -120,6 +120,40 @@ module.exports = {
     weapons: [
       {type: 'fire', style: 'blue', fireRate: 25},
       {type: 'mine', style: 'blue', fireRate: 5000}
+    ]
+  },
+
+  h: {
+    name: 'Stinger',
+    topSpeed: 19,
+    accelRate: 1.2,
+    drag: 0.04,
+    rotationSpeed: 12,
+    shield: {
+      max: 75,
+      regenRate: 0.2,
+      style: 'red'
+    },
+    weapons: [
+      {type: 'laserspin', style: 'red', fireRate: 100},
+      {type: 'mine', style: 'red', fireRate: 5000}
+    ]
+  },
+
+  i: {
+    name: 'Dart',
+    topSpeed: 25,
+    accelRate: 1.5,
+    drag: 0.04,
+    rotationSpeed: 12,
+    shield: {
+      max: 75,
+      regenRate: 0.2,
+      style: 'green'
+    },
+    weapons: [
+      {type: 'minidart', style: 'green', fireRate: 400},
+      {type: 'mine', style: 'green', fireRate: 5000}
     ]
   }
 };

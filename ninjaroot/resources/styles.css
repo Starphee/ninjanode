@@ -15,7 +15,7 @@ body * {
 }
 
 body {
-   font-family: sans-serif;
+  font-family: sans-serif;
    width: 100%;
  }
 
@@ -60,16 +60,34 @@ div#debug {
 }
 
 /* Connection Window */
+#connection-window-wrapper {
+background-color: red;
+}
+
 #connection-window {
-  background-color: #A0A0A0;
+  background-color: #a0a0a000;
+  color: rgb(0, 255, 0);
+  border: 2px solid rgb(0, 255, 0);
   height: 372px;
   left: 50%;
-  margin-left: -300px;
-  margin-top: -200px;
+  margin-left: -22%;
+  margin-top: -11%;
   top: 50%;
-  width: 600px;
-  -webkit-box-shadow: 0 0 25px 17px rgba(200, 200, 200, 0.4);
-  box-shadow: 0 0 25px 17px rgba(200, 200, 200, 0.4);
+  width: 800px;
+  /* -webkit-box-shadow: 0 0 25px 17px rgba(200, 200, 200, 0.4); */
+  /* box-shadow: 0 0 25px 17px rgba(200, 200, 200, 0.4); */
+}
+
+#connection-window input{
+ font-size: 16px;
+     border-width: 1px;
+     border-color: #00ff06;
+     background-color: rgba(255, 0, 0, 0);
+     color: #007b0c;
+     border-style: solid;
+     border-radius: 0px;
+     box-shadow: 0px 0px 6px rgba(27,255,0,.75);
+     text-shadow: 0px 0px 5px rgba(66,66,66,.75);
 }
 
 #connection-window legend {
@@ -85,9 +103,19 @@ div#debug {
 }
 
 #connection-window button {
-  font-size: 0.9em;
-  font-weight: bold;
-  height: 2.5em;
+  box-shadow: 0px 10px 14px -7px #3e7327;
+	background-color:transparent;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 0px 6px #5b8a3c;
   margin-right: -0.5em;
   margin-top: -0.5em;
   float: right;
@@ -105,6 +133,7 @@ div#debug {
   height: 167px;
   margin: 0 auto;
   overflow: auto;
+  color: black;
 }
 
 #connection-window .selector {
@@ -145,7 +174,9 @@ div#debug {
 #connection-window .selector .ship_g.selected { background-color: #1400FF; }
 
 #connection-window fieldset {
-  border: 1px solid #ddd;
+  border: 1px solid rgb(0, 255, 34);
+  /* -webkit-box-shadow: 5px 5px 15px 5px rgba(4,255,0,0.53); 
+box-shadow: 5px 5px 15px 5px rgba(4,255,0,0.53); */
   border-radius: 1em 0 1em 0;
 }
 
@@ -189,12 +220,12 @@ div#debug {
 
 #connection-window .ship-select label.selected {
   background: #e0f3fa;
-  background: -moz-linear-gradient(13deg,  #e0f3fa 0%, #d8f0fc 43%, #b8e2f6 55%, #b6dffd 100%);
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#e0f3fa), color-stop(43%,#d8f0fc), color-stop(55%,#b8e2f6), color-stop(100%,#b6dffd));
-  background: -webkit-linear-gradient(13deg,  #e0f3fa 0%,#d8f0fc 43%,#b8e2f6 55%,#b6dffd 100%);
-  background: -o-linear-gradient(13deg,  #e0f3fa 0%,#d8f0fc 43%,#b8e2f6 55%,#b6dffd 100%);
+  background: -moz-linear-gradient(13deg,  #e2fae0 0%, #d8fcdb 43%, #b8f6bb 55%, #b6fdbc 100%);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#e0f3fa), color-stop(43%,#e0fcd8), color-stop(55%,#bdf6b8), color-stop(100%,#b8fdb6));
+  background: -webkit-linear-gradient(13deg,  #e0fae1 0%,#d8fcdb 43%,#b8f6c2 55%,#b6fdc2 100%);
+  background: -o-linear-gradient(13deg,  #e0fae0 0%,#d8fcdd 43%,#baf6b8 55%,#bcfdb6 100%);
   background: -ms-linear-gradient(13deg,  #e0f3fa 0%,#d8f0fc 43%,#b8e2f6 55%,#b6dffd 100%);
-  background: linear-gradient(13deg,  #e0f3fa 0%,#d8f0fc 43%,#b8e2f6 55%,#b6dffd 100%);
+  background: linear-gradient(13deg,  #e1fae0 0%,#dffcd8 43%,#b8f6b8 55%,#b6fdb6 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0f3fa', endColorstr='#b6dffd',GradientType=1 );
 }
 
@@ -645,6 +676,10 @@ ship.ship_d { background-image: url('graphics/ships/ship_d.png'); }
 ship.ship_e { background-image: url('graphics/ships/ship_e.png'); }
 ship.ship_f { background-image: url('graphics/ships/ship_f.png'); }
 ship.ship_g { background-image: url('graphics/ships/ship_g.png'); }
+ship.ship_h { background-image: url('graphics/ships/ship_h.png'); }
+ship.ship_i { background-image: url('graphics/ships/ship_i.png'); }
+ship.ship_j { background-image: url('graphics/ships/ship_j.png'); }
+
 
 /* Forward thrust */
 ship.thrusting:before, ship.thrusting:after {
@@ -674,6 +709,12 @@ ship.ship_f.thrusting:after { left: 3px; top: 62px; }
 ship.ship_g.thrusting:before { left: 18px; top: 62px; }
 ship.ship_g.thrusting:after { left: -8px; top: 55px; }
 
+ship.ship_h.thrusting:before { left: 3px; top: 45px; }
+ship.ship_h.thrusting:after { left: 10px; top: 45px; }
+
+ship.ship_i.thrusting:before {left: 18px; top: 62px; }
+ship.ship_i.thrusting:after {left: -8px; top: 55px; }
+
 /* Backward thrust */
 ship.thrusting_back:before, ship.thrusting_back:after {
   content: url("graphics/flame_up.gif");
@@ -700,6 +741,12 @@ ship.ship_f.thrusting_back:after { left: 0px; top: -23px; }
 
 ship.ship_g.thrusting_back:before { left: 0px; top: 13px; }
 ship.ship_g.thrusting_back:after { left: 11px; top: 13px; }
+
+ship.ship_h.thrusting_back:before { left: 1px; top: 3px; }
+ship.ship_h.thrusting_back:after { left: 13px; top: 3px; }
+
+ship.ship_i.thrusting_back:before {left: 1px; top: 3px;}
+ship.ship_i.thrusting_back:after {left: 13px; top: 3px;}
 
 
 /* Ship Beacon/Spawn Point */
@@ -822,9 +869,9 @@ projectile.red {background-color: red; border-color: red;}
 projectile.yellow {background-color: yellow; border-color: yellow;}
 
 projectile.fire {
-  height: 64px !important;
-  width: 64px !important;
-  background-size: 64px 64px;
+  height: 32px !important;
+  width: 32px !important;
+  background-size: 32px 32px;
   background-image: url('graphics/projectiles/fire.png');
   background-color: transparent !important;
 
@@ -837,6 +884,32 @@ projectile.fire {
   -webkit-animation-duration: 1000ms;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+}
+
+projectile.laserspin {
+  height: 32px !important;
+  width: 32px !important;
+  background-size: 32px 32px;
+  background-image: url('graphics/projectiles/laser.png');
+  background-color: transparent !important;
+
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 500ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+projectile.minidart {
+  height: 32px !important;
+  width: 32px !important;
+  background-size: 32px 32px;
+  background-image: url('graphics/projectiles/minidart.png');
+  background-color: transparent !important;
 }
 
 /** Power-ups effects! **/

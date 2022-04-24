@@ -86,10 +86,40 @@ module.exports = {
     sound: 5,
     size: {
       hitRadius: 21,
-      width: 64,
-      height: 64
+      width: 32,
+      height: 32
     },
     knockBackForce: 10,
+    yOffset: -8
+  },
+
+  laserspin : {
+    name: "Spinning Laser",
+    damage: 35,
+    speed: 40,
+    life: 1000,
+    sound: 3,
+    size: {
+      hitRadius: 21,
+      width: 32,
+      height: 32
+    },
+    knockBackForce: 10,
+    yOffset: -8
+  },
+
+  minidart : {
+    name: "Miniature Space Dart",
+    damage: 20,
+    speed: 70,
+    life: 1000,
+    sound: 3,
+    size: {
+      hitRadius: 21,
+      width: 32,
+      height: 32
+    },
+    knockBackForce: 3,
     yOffset: -8
   }
 };
