@@ -5,28 +5,28 @@
 export const projectileTypes = {
   laser: {
     name: 'Death Laser',
-    speed: 1125,
-    life: 2500, // How many ms till it dies?
+    speed: 2250, // Doubled
+    life: 4000, // Constant
     sound: 3,
     sounds: {
-      emission: ['laser1'],
+      emission: ['heavylaser'],
       reception: ['hit1', 'hit2'],
     },
-    damage: 50,
+    damage: 60,
     size: {
       hitRadius: 20,
       width: 8,
       height: 70,
     },
-    knockBackForce: 33.3,
+    knockBackForce: 200,
     yOffset: -30,
   },
 
   biglaser: {
     name: 'Super Laser',
     damage: 40,
-    speed: 1000,
-    life: 5000,
+    speed: 2000, // Doubled
+    life: 4000, // Constant
     sound: 1,
     sounds: {
       emission: ['laser2'],
@@ -44,8 +44,8 @@ export const projectileTypes = {
   duallaser: {
     name: 'Dual Laser',
     damage: 30,
-    speed: 883.4,
-    life: 2500,
+    speed: 1766.8, // Doubled
+    life: 4000, // Constant
     sound: 3,
     sounds: {
       emission: ['laser2'],
@@ -63,8 +63,8 @@ export const projectileTypes = {
   energy: {
     name: 'Energy Orb',
     damage: 30,
-    speed: 333,
-    life: 5500,
+    speed: 666, // Doubled
+    life: 4000, // Constant
     sound: 2,
     sounds: {
       emission: ['energy'],
@@ -82,8 +82,8 @@ export const projectileTypes = {
   mine: {
     name: 'Mine',
     damage: 100,
-    speed: 0,
-    life: 30 * 60 * 1000, // 30 Minutes
+    speed: 0, // Unchanged
+    life: 4000, // Constant
     sound: 4,
     sounds: {
       emission: ['mine'],
@@ -100,20 +100,20 @@ export const projectileTypes = {
 
   fire: {
     name: 'Fire',
-    damage: 40,
-    speed: 583,
-    life: 1000,
+    damage: 15,
+    speed: 1166, // Doubled
+    life: 4000, // Constant
     sound: 5,
     sounds: {
       emission: ['flame'],
       reception: ['hit1', 'hit2'],
     },
     size: {
-      hitRadius: 21,
-      width: 64,
-      height: 64,
+      hitRadius: 15,
+      width: 40,
+      height: 40,
     },
-    knockBackForce: 166,
+    knockBackForce: 100,
     yOffset: -8,
   },
 };

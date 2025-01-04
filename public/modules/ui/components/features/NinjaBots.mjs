@@ -4,7 +4,7 @@ import { getRando } from 'utils';
 import { shipTypes } from 'data';
 import { getBotName } from 'bots';
 
-const MAX_BOTS = 2;
+const MAX_BOTS = 5;
 
 const addBot = (host) => {
   // Don't add anything if we're at max.

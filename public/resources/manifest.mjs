@@ -25,9 +25,17 @@ export const graphicBundleAssets = {
   'ship-g': `${graphics}/ships/ship_g.png`,
 
   spark: `${graphics}/spark.png`,
-  starfield: `${graphics}/starfield.png`,
-  stars: `${graphics}/stars-green.png`,
+  starfield: `${graphics}/stars_1.png`,
+  stars: `${graphics}/purple_background.png`,
   smoke: `${graphics}/explosions/smoke.png`,
+
+  'laser-a': `${graphics}/projectiles/laser_a.png`,
+  'laser-b': `${graphics}/projectiles/laser_b.png`,
+  'laser-c': `${graphics}/projectiles/laser_c.png`,
+  'laser-d': `${graphics}/projectiles/laser_d.png`,
+  'laser-e': `${graphics}/projectiles/laser_e.png`,
+  'laser-f': `${graphics}/projectiles/laser_f.png`,
+  'laser-g': `${graphics}/projectiles/laser_g.png`,
 
   // TODO: We really only need one gray image and then to tint it.
   shield_blue: `${graphics}/shields/shield_blue.png`,
@@ -45,6 +53,7 @@ export const soundBundleAssets = {
   energy: `${audio}/weapons/energy.wav`,
   laser1: `${audio}/weapons/laser1.wav`,
   laser2: `${audio}/weapons/laser2.wav`,
+  heavylaser: `${audio}/weapons/heavylaser.wav`,
   mine: `${audio}/weapons/mine.wav`,
   flame: `${audio}/weapons/flame.wav`,
 

@@ -1,7 +1,7 @@
 {
   "lifetime": {
-    "min": 0.4,
-    "max": 0.7
+    "min": 2,
+    "max": 4
   },
   "frequency": 0.001,
   "emitterLifetime": 0.2,
@@ -36,7 +36,7 @@
           "list": [
             {
               "time": 0,
-              "value": 700
+              "value": 250
             },
             {
               "time": 1,

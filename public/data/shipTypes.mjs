@@ -165,7 +165,7 @@ export const shipTypes = {
     topSpeed: 833.4,
     accelRate: 18.3,
     drag: 1,
-    rotationSpeed: 10,
+    rotationSpeed: 15,
     thrusterPositions: {
       front: [{ angle: -90, distance: 40 }],
       rear: [{ angle: 90, distance: 35 }],
