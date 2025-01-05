@@ -12,7 +12,7 @@ import {
   storeUser,
   removeUser,
 } from 'models';
-import { PixiShip, PixiCamera } from 'pixirender';
+import { PixiShip, PixiCamera, PixiPnbits } from 'pixirender';
 import { manifest } from 'manifest';
 
 const { Application, TilingSprite, Texture, Assets, sound } = window.PIXI;
@@ -63,7 +63,7 @@ export class PixiRenderer {
       this.camera = new PixiCamera({
         app: this.app,
         playArea: this.gameConfig.playArea,
-        layers: ['labels', 'ships', 'projectiles', 'background'],
+        layers: ['labels', 'ships', 'projectiles', 'pnbits', 'background'],
       });
 
       // Bind to global settings state changes.
@@ -301,8 +301,8 @@ export class PixiRenderer {
 
     this.app.ticker.add(() => {
       layers[1].tilePosition = {
-        x: -this.stage.base.center.x / 9,
-        y: -this.stage.base.center.y / 9,
+        x: -this.stage.base.center.x / 13,
+        y: -this.stage.base.center.y / 13,
       };
     });
   }
@@ -344,11 +344,22 @@ export class PixiRenderer {
       projstat: this.onProjectileStatusUpdate,
       projpos: this.onUpdateProjectilePos,
       // powerupstat: this.onPowerUpStatusUpdate,
-      // pnbitsstat: this.onPnbitsStatusUpdate,
+      pnbitsstat: this.onPnbitsStatusUpdate,
       disconnect: () => console.log('Disconnected!'),
     };
 
     this.bindSocketEvents(binds);
+  }
+
+  onPnbitsStatusUpdate(pnbits) {
+    for (const id in pnbits) {
+      const { pos, radius } = pnbits[id];
+      new PixiPnbits({
+        pos,
+        radius,
+        parent: this.stage.pnbits,
+      });
+    }
   }
 
   bindSocketEvents(binds) {

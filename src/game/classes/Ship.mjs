@@ -418,7 +418,7 @@ export class Ship extends DynamicObject {
 
     // Modify Velocity length/angle based on proximity to all PNBITS
     let pnbitsEffected = false;
-    if (!this.exploding) {
+    if (!this.exploding && false) {
       for (const i in pnbits) {
         const p = pnbits[i];
         const thisCenter = {

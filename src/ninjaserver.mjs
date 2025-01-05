@@ -506,6 +506,7 @@ function emitAllPNBITS(targetID) {
       // TODO: Get targetID to send to JUST that socket.io ID!
     }
     io.sockets.emit('pnbitsstat', out);
+    console.log(out);
   }
 }
 

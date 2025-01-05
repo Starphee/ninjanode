@@ -24,6 +24,10 @@ export const graphicBundleAssets = {
   'ship-f': `${graphics}/ships/ship_f.png`,
   'ship-g': `${graphics}/ships/ship_g.png`,
 
+  'planet-a': `${graphics}/ships/ship_a.png`,
+  // 'planet-b': `${graphics}/pnbits/planet_b.gif`,
+  // 'planet-c': `${graphics}/pnbits/planet_c.gif`,
+
   spark: `${graphics}/spark.png`,
   starfield: `${graphics}/starfield.png`,
   stars: `${graphics}/stars-green.png`,
