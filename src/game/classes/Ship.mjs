@@ -111,19 +111,22 @@ export class Ship extends DynamicObject {
 
   // Add a projectile
   addProjectile(angle, weaponId, callbacks) {
-    // Ensure this.config is defined and has weapons
-    if (!this.config || !this.config.weapons) {
-      throw new Error('Ship configuration or weapons are not defined.');
+    // Cull inactive projectiles.
+    for (const i in this.projectiles) {
+      if (!this.projectiles[i].active) {
+        this.cullProjectile(i);
+        break;
+      }
     }
 
-    const { weapons } = this.config; // Destructure weapons from config
+    const { weapons } = this.config;
     const id = getId('p');
     this.projectiles[id] = new Projectile({
       id,
       type: weapons[weaponId].type,
-      style: this.style, // Pass the ship style
-      weaponId,
+      style: weapons[weaponId].style,
       shipId: this.id,
+      weaponId,
       pos: {
         x: this.pos.x,
         y: this.pos.y,
