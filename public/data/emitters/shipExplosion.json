@@ -1,7 +1,7 @@
 {
   "lifetime": {
     "min": 2,
-    "max": 3
+    "max": 2
   },
   "particlesPerWave": 8,
   "frequency": 0.05,
@@ -58,10 +58,10 @@
       "type": "rotation",
       "config": {
         "accel": 0,
-        "minSpeed": 10,
-        "maxSpeed": 50,
+        "minSpeed": 30,
+        "maxSpeed": 360,
         "minStart": 0,
-        "maxStart": 90
+        "maxStart": 360
       }
     },
     {
